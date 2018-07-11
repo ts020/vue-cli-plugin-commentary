@@ -1,7 +1,5 @@
 import { storiesOf } from '../../lib/story'
 import ColorBox from './ColorBox'
-import Colors from './colors.story.vue'
-import Colors2 from './colors2.story.vue'
 storiesOf('atoms/ColorBox', ColorBox)
-    .add('aa', Colors)
-    .add('bb', Colors2)
+    .add('赤の説明が出てるはず', { props: { color: 'red' }, detail: '赤だよ' })
+    .add('青の説明', { props: { color: 'blue' }, detail: '青だよ' })

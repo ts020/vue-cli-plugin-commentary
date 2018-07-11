@@ -1,9 +1,10 @@
 <template>
     <div class="commpentary-card">
-        <h2>{{title}}</h2>
-        <div class="desc">{{desc}}</div>
+        <h2>{{story.name}}</h2>
+        <div class="desc">{{story.detail}}</div>
 		<div class="commpentary-body">
-            <slot />
+            <component :is="component" v-bind="story.props" />
+            <div>{{code}}</div>
 		</div>
     </div>
 </template>
@@ -38,8 +39,23 @@ h2 {
 <script>
 export default {
     props: {
-        desc: String,
-        title: String,
+        story: Object,
+        component: Object,
+    },
+    computed: {
+        code() {
+            if (this.story.slot) {
+                return `<${this.component.name} ${this.attr} >${this.story.slot}</${this.component.name}>`
+            } else {
+                return `<${this.component.name} ${this.attr} />`
+            }
+        },
+        attr() {
+            const props = this.story.props
+            return Object.keys(props)
+                .map(key => `${key}="${props[key]}"`)
+                .join(' ')
+        },
     },
 }
 </script>

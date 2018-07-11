@@ -5,8 +5,10 @@
 		</div>
 		<div class="contents-block" :class="{'is-full':isFull}">
             <template v-if="current">
+                <component :is="current.component" />
                 <component-info :component="current.component" />
-			    <component v-for="story in current.subStories" :key="story.name" :is="story.view" />
+                <component-card v-for="story in current.subStories" :key="story.name" :story="story" :component="current.component" />
+			    
             </template>
 		</div>
 		<div class="full" @click="isFull=!isFull">
@@ -57,9 +59,10 @@
 </style>
 <script>
 import ComponentInfo from './ComponentInfo'
+import ComponentCard from './ComponentCard'
 import { getStories } from '../story'
 export default {
-    components: { ComponentInfo },
+    components: { ComponentInfo, ComponentCard },
     data() {
         return {
             isFull: false,
