@@ -1,6 +1,5 @@
 import Vue from 'vue'
-import { setup } from 'vue-cli-plugin-commentary/lib'
-import { storiesOf } from 'vue-cli-plugin/commentary/lib/story'
+import { setup, storiesOf } from 'vue-cli-plugin-commentary/lib'
 import ColorBox from './example/ColorBox'
 import ColorStory from './example/ColorBox.story'
 storiesOf('atoms/ColorBox', ColorBox)
