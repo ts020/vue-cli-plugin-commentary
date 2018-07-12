@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-commentary",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "vue component guide tool",
   "main": "index.js",
   "files": [
