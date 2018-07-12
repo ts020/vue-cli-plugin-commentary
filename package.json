@@ -15,7 +15,6 @@
     "@vue/cli-shared-utils": "^3.0.0-beta.6"
   },
   "dependencies": {
-    "vue-router": "^3.0.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.0",
     "@fortawesome/free-solid-svg-icons": "^5.1.0",
     "@fortawesome/vue-fontawesome": "^0.1.0"
@@ -46,5 +45,5 @@
     }
   },
   "author": "takanori sugawara",
-  "license": "MIT"
+  "License": "MIT"
 }
