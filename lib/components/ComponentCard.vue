@@ -3,8 +3,13 @@
         <h2>{{story.name}}</h2>
         <div class="desc">{{story.detail}}</div>
 		<div class="commpentary-body">
-            <component :is="component" v-bind="story.props" />
-            <div>{{code}}</div>
+            <template v-if="story.type === 'props'">
+                <component :is="component" v-bind="story.props" />
+                <div>{{code}}</div>
+            </template>
+            <template v-else>
+                <component :is="story.view" v-bind="story.props" />
+            </template>
 		</div>
     </div>
 </template>

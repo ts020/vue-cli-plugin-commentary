@@ -29,7 +29,5 @@
 }
 </style>
 <script>
-export default {
-    story: 'atoms/colors',
-}
+export default {}
 </script>
