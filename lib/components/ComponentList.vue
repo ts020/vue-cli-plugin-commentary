@@ -2,10 +2,15 @@
     <div class="component-list">
         <!-- <div v-for="story in stories" :key="story.name" @click="$emit('select',story)">{{story.name}}</div> -->
         <div class="root">
-            <div class="name" v-for="dir in directories.children" :key="dir.name" @click="selectRoot(dir)">{{dir.name}}</div>
+            <div class="name" v-for="dir in directories.children" :key="dir.name" @click="selectRoot(dir)">
+                <typo size="10" weight="500">{{dir.name}}</typo>
+            </div>
         </div>
         <div class="dir-list" v-if="current">
-            <div class="parent" v-if="current.parent" @click="selectRoot(current.parent)"> return</div>
+            <div class="parent" v-if="current.parent" @click="selectRoot(current.parent)">
+                <font-awesome-icon class="return-icon" size="xs" icon="arrow-left" />
+                <typo size="12">{{current.dir.name}}</typo>
+            </div>
             <component-list-item @open="selectRoot($event, current.dir)" @select="selectStory" :selectedStory="currentStory" v-for="dir in current.dir.children" :key="dir.name" :directory="dir" :isRoot="true" />
         </div>
         
@@ -25,13 +30,25 @@
     color: white;
 }
 .parent {
-    padding: 16px;
-    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background: #eee;
+    justify-content: center;
+}
+
+.return-icon {
+    margin-right: 8px;
 }
 
 .name {
-    padding: 16px;
     text-align: center;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #333;
 }
 .dir-list {
     width: 160px;
@@ -39,8 +56,9 @@
 </style>
 <script>
 import ComponentListItem from './ComponentListItem'
+import Typo from './Typo'
 export default {
-    components: { ComponentListItem },
+    components: { ComponentListItem, Typo },
     props: {
         stories: {
             type: Array,
