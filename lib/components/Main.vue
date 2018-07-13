@@ -1,8 +1,8 @@
 <template>
 	<div class="commentary" >
-		<div class="global-navigation" v-if="!isFull">
-            <div v-for="story in $commentary.stories" :key="story.name" @click="selectStory(story)">{{story.name}}</div>
-		</div>
+        <div class="list" v-if="!isFull">
+            <component-list :stories="$commentary.stories" @select="selectStory($event)" />
+        </div>
 		<div class="contents-block" :class="{'is-full':isFull}">
             <template v-if="current">
                 <component :is="current.component" />
@@ -16,7 +16,15 @@
 		</div>
 	</div>
 </template>
-
+<style>
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+</style>
 <style scoped>
 .commentary {
     display: flex;
@@ -24,18 +32,9 @@
     height: 100%;
 }
 
-.global-navigation {
-    border-right: 1px solid var(--color-grey-100);
-    background-color: var(--color-grey-50);
-    width: 180px;
-}
-
 .contents-block {
     flex: 1;
-}
-
-.contents-block.is-full {
-    left: 0;
+    padding: 16px;
 }
 
 .full {
@@ -60,8 +59,9 @@
 <script>
 import ComponentInfo from './ComponentInfo'
 import ComponentCard from './ComponentCard'
+import ComponentList from './ComponentList'
 export default {
-    components: { ComponentInfo, ComponentCard },
+    components: { ComponentInfo, ComponentCard, ComponentList },
     data() {
         return {
             isFull: false,
@@ -70,7 +70,6 @@ export default {
     },
     methods: {
         selectStory(story) {
-            console.log(story)
             this.current = story
         },
     },
