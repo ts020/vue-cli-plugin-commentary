@@ -4,14 +4,14 @@
         <div class="root">
             <div class="name" v-for="dir in directories.children" :key="dir.name" @click="selectRoot(dir)" :selected="dir.name === selectedDir">
                 <img class="name-icon" v-if="$commentary.icons[dir.name]" :src="$commentary.icons[dir.name]" />
-                <typo size="10" weight="500">{{dir.name}}</typo>
+                <typo size="p-4" weight="500">{{dir.name}}</typo>
             </div>
         </div>
         <div class="dir-list" v-if="current">
             <div class="parent" v-if="current.parent" @click="selectDir(current.parent)">
                 <div class="return-button">
                     <font-awesome-icon class="return-icon" size="xs" icon="arrow-left" />
-                    <typo size="12">{{current.dir.name}}</typo>
+                    <typo size="p-3">{{current.dir.name}}</typo>
                 </div>
             </div>
             <component-list-item @open="selectDir($event, current.dir)" @select="selectStory" :selectedStory="currentStory" v-for="dir in current.dir.children" :key="dir.name" :directory="dir" :isRoot="true" />

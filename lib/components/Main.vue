@@ -6,9 +6,8 @@
 		<div class="contents-block" :class="{'is-full':isFull}">
             <template v-if="current">
                 <component :is="current.component" />
-                <component-info :component="current.component" />
+                <component-info :component="current.component" class="component-info" />
                 <component-card v-for="story in current.subStories" :key="story.name" :story="story" :component="current.component" />
-			    
             </template>
 		</div>
 		<div class="full" @click="isFull=!isFull">
@@ -37,6 +36,9 @@ body {
     padding: 16px;
 }
 
+.component-info {
+    margin: 32px 0;
+}
 .full {
     position: fixed;
     right: 10px;

@@ -2,7 +2,7 @@
     <div class="component-list-item">
         <div class="name" :selected="selected" @click="select()" :is-directory="isDirectory">
             <font-awesome-icon class="icon" v-if="isDirectory" size="xs" icon="sitemap" />
-           <typo size="12">{{directory.name}}</typo>
+           <typo size="p-3">{{directory.name}}</typo>
         </div>
     </div>
 </template>
