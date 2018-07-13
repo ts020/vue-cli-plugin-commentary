@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="276px" height="191px" viewBox="0 0 276 191" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>molecule</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="34.5" cy="34.5" rx="34.5" ry="34.5"></ellipse>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="69" height="69" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <ellipse id="path-3" cx="34.5" cy="34.5" rx="34.5" ry="34.5"></ellipse>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="69" height="69" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <ellipse id="path-5" cx="34.5" cy="34.5" rx="34.5" ry="34.5"></ellipse>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="69" height="69" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <ellipse id="path-7" cx="34.5" cy="34.5" rx="34.5" ry="34.5"></ellipse>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="69" height="69" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <ellipse id="path-9" cx="34.5" cy="34.5" rx="34.5" ry="34.5"></ellipse>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="69" height="69" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <ellipse id="path-11" cx="34.5" cy="34.5" rx="34.5" ry="34.5"></ellipse>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="69" height="69" fill="white">
+            <use xlink:href="#path-11"></use>
+        </mask>
+        <ellipse id="path-13" cx="34.5" cy="34.5" rx="34.5" ry="34.5"></ellipse>
+        <mask id="mask-14" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="69" height="69" fill="white">
+            <use xlink:href="#path-13"></use>
+        </mask>
+        <ellipse id="path-15" cx="34.5" cy="34.5" rx="34.5" ry="34.5"></ellipse>
+        <mask id="mask-16" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="69" height="69" fill="white">
+            <use xlink:href="#path-15"></use>
+        </mask>
+        <ellipse id="path-17" cx="34.5" cy="34.5" rx="34.5" ry="34.5"></ellipse>
+        <mask id="mask-18" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="69" height="69" fill="white">
+            <use xlink:href="#path-17"></use>
+        </mask>
+        <ellipse id="path-19" cx="34.5" cy="34.5" rx="34.5" ry="34.5"></ellipse>
+        <mask id="mask-20" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="69" height="69" fill="white">
+            <use xlink:href="#path-19"></use>
+        </mask>
+        <ellipse id="path-21" cx="34.5" cy="34.5" rx="34.5" ry="34.5"></ellipse>
+        <mask id="mask-22" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="69" height="69" fill="white">
+            <use xlink:href="#path-21"></use>
+        </mask>
+        <ellipse id="path-23" cx="34.5" cy="34.5" rx="34.5" ry="34.5"></ellipse>
+        <mask id="mask-24" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="69" height="69" fill="white">
+            <use xlink:href="#path-23"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="molecule">
+            <g id="Group-5">
+                <g id="Group">
+                    <use id="Combined-Shape" stroke="#000000" mask="url(#mask-2)" stroke-width="22" xlink:href="#path-1"></use>
+                    <ellipse id="Combined-Shape" fill="#45a6f5" cx="34.5" cy="34.5" rx="16.8125" ry="16.8125"></ellipse>
+                </g>
+                <g id="Group" transform="translate(69.000000, 0.000000)">
+                    <use id="Combined-Shape" stroke="#000000" mask="url(#mask-4)" stroke-width="22" xlink:href="#path-3"></use>
+                    <ellipse id="Combined-Shape" fill="#45a6f5" cx="34.5" cy="34.5" rx="16.8125" ry="16.8125"></ellipse>
+                </g>
+                <g id="Group" transform="translate(138.000000, 0.000000)">
+                    <use id="Combined-Shape" stroke="#000000" mask="url(#mask-6)" stroke-width="22" xlink:href="#path-5"></use>
+                    <ellipse id="Combined-Shape" fill="#45a6f5" cx="34.5" cy="34.5" rx="16.8125" ry="16.8125"></ellipse>
+                </g>
+                <g id="Group" transform="translate(207.000000, 0.000000)">
+                    <use id="Combined-Shape" stroke="#000000" mask="url(#mask-8)" stroke-width="22" xlink:href="#path-7"></use>
+                    <ellipse id="Combined-Shape" fill="#45a6f5" cx="34.5" cy="34.5" rx="16.8125" ry="16.8125"></ellipse>
+                </g>
+            </g>
+            <g id="Group-3" transform="translate(0.000000, 61.000000)">
+                <g id="Group">
+                    <use id="Combined-Shape" stroke="#000000" mask="url(#mask-10)" stroke-width="22" xlink:href="#path-9"></use>
+                    <ellipse id="Combined-Shape" fill="#45a6f5" cx="34.5" cy="34.5" rx="16.8125" ry="16.8125"></ellipse>
+                </g>
+                <g id="Group" transform="translate(69.000000, 0.000000)">
+                    <use id="Combined-Shape" stroke="#000000" mask="url(#mask-12)" stroke-width="22" xlink:href="#path-11"></use>
+                    <ellipse id="Combined-Shape" fill="#45a6f5" cx="34.5" cy="34.5" rx="16.8125" ry="16.8125"></ellipse>
+                </g>
+                <g id="Group" transform="translate(138.000000, 0.000000)">
+                    <use id="Combined-Shape" stroke="#000000" mask="url(#mask-14)" stroke-width="22" xlink:href="#path-13"></use>
+                    <ellipse id="Combined-Shape" fill="#45a6f5" cx="34.5" cy="34.5" rx="16.8125" ry="16.8125"></ellipse>
+                </g>
+                <g id="Group" transform="translate(207.000000, 0.000000)">
+                    <use id="Combined-Shape" stroke="#000000" mask="url(#mask-16)" stroke-width="22" xlink:href="#path-15"></use>
+                    <ellipse id="Combined-Shape" fill="#45a6f5" cx="34.5" cy="34.5" rx="16.8125" ry="16.8125"></ellipse>
+                </g>
+            </g>
+            <g id="Group-4" transform="translate(0.000000, 122.000000)">
+                <g id="Group">
+                    <use id="Combined-Shape" stroke="#000000" mask="url(#mask-18)" stroke-width="22" xlink:href="#path-17"></use>
+                    <ellipse id="Combined-Shape" fill="#45a6f5" cx="34.5" cy="34.5" rx="16.8125" ry="16.8125"></ellipse>
+                </g>
+                <g id="Group" transform="translate(69.000000, 0.000000)">
+                    <use id="Combined-Shape" stroke="#000000" mask="url(#mask-20)" stroke-width="22" xlink:href="#path-19"></use>
+                    <ellipse id="Combined-Shape" fill="#45a6f5" cx="34.5" cy="34.5" rx="16.8125" ry="16.8125"></ellipse>
+                </g>
+                <g id="Group" transform="translate(138.000000, 0.000000)">
+                    <use id="Combined-Shape" stroke="#000000" mask="url(#mask-22)" stroke-width="22" xlink:href="#path-21"></use>
+                    <ellipse id="Combined-Shape" fill="#45a6f5" cx="34.5" cy="34.5" rx="16.8125" ry="16.8125"></ellipse>
+                </g>
+                <g id="Group" transform="translate(207.000000, 0.000000)">
+                    <use id="Combined-Shape" stroke="#000000" mask="url(#mask-24)" stroke-width="22" xlink:href="#path-23"></use>
+                    <ellipse id="Combined-Shape" fill="#45a6f5" cx="34.5" cy="34.5" rx="16.8125" ry="16.8125"></ellipse>
+                </g>
+            </g>
+            <g id="Group-2" transform="translate(62.000000, 27.000000)" fill="#45a6f5">
+                <ellipse id="Oval-2" cx="7.5" cy="7.5" rx="7.5" ry="7.5"></ellipse>
+                <ellipse id="Oval-2" cx="76.5" cy="9.5" rx="7.5" ry="7.5"></ellipse>
+                <ellipse id="Oval-2" cx="145.5" cy="9.5" rx="7.5" ry="7.5"></ellipse>
+            </g>
+            <g id="Group-2" transform="translate(27.000000, 61.000000)" fill="#45a6f5">
+                <ellipse id="Oval-2" cx="7.5" cy="7.5" rx="7.5" ry="7.5"></ellipse>
+                <ellipse id="Oval-2" cx="76.5" cy="9.5" rx="7.5" ry="7.5"></ellipse>
+                <ellipse id="Oval-2" cx="145.5" cy="9.5" rx="7.5" ry="7.5"></ellipse>
+                <ellipse id="Oval-2" cx="214.5" cy="9.5" rx="7.5" ry="7.5"></ellipse>
+            </g>
+            <g id="Group-2" transform="translate(27.000000, 116.000000)" fill="#45a6f5">
+                <ellipse id="Oval-2" cx="7.5" cy="7.5" rx="7.5" ry="7.5"></ellipse>
+                <ellipse id="Oval-2" cx="76.5" cy="9.5" rx="7.5" ry="7.5"></ellipse>
+                <ellipse id="Oval-2" cx="145.5" cy="9.5" rx="7.5" ry="7.5"></ellipse>
+                <ellipse id="Oval-2" cx="214.5" cy="9.5" rx="7.5" ry="7.5"></ellipse>
+            </g>
+            <g id="Group-2" transform="translate(62.000000, 88.000000)" fill="#45a6f5">
+                <ellipse id="Oval-2" cx="7.5" cy="7.5" rx="7.5" ry="7.5"></ellipse>
+                <ellipse id="Oval-2" cx="76.5" cy="9.5" rx="7.5" ry="7.5"></ellipse>
+                <ellipse id="Oval-2" cx="145.5" cy="9.5" rx="7.5" ry="7.5"></ellipse>
+            </g>
+            <g id="Group-2" transform="translate(62.000000, 147.000000)" fill="#45a6f5">
+                <ellipse id="Oval-2" cx="7.5" cy="7.5" rx="7.5" ry="7.5"></ellipse>
+                <ellipse id="Oval-2" cx="76.5" cy="9.5" rx="7.5" ry="7.5"></ellipse>
+                <ellipse id="Oval-2" cx="145.5" cy="9.5" rx="7.5" ry="7.5"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

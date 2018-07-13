@@ -9,5 +9,14 @@ storiesOf('atoms/ColorBox', ColorBox)
 
 storiesOf('molecules/ColorBox3', ColorBox).addExample('説明用のコンポーネント配置してみる', ColorStory)
 storiesOf('molecules/ddd/ColorBox4', ColorBox)
+storiesOf('orgamisms/ColorBox4', ColorBox)
+storiesOf('templates/ColorBox4', ColorBox)
 
-setup(Vue)
+setup(Vue, {
+    icons: {
+        atoms: require('./icon/atom.svg'),
+        molecules: require('./icon/molecule.svg'),
+        orgamisms: require('./icon/organism.svg'),
+        templates: require('./icon/template.svg'),
+    },
+})

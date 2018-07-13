@@ -2,18 +2,20 @@
     <div class="component-list">
         <!-- <div v-for="story in stories" :key="story.name" @click="$emit('select',story)">{{story.name}}</div> -->
         <div class="root">
-            <div class="name" v-for="dir in directories.children" :key="dir.name" @click="selectRoot(dir)">
+            <div class="name" v-for="dir in directories.children" :key="dir.name" @click="selectRoot(dir)" :selected="dir.name === selectedDir">
+                <img class="name-icon" v-if="$commentary.icons[dir.name]" :src="$commentary.icons[dir.name]" />
                 <typo size="10" weight="500">{{dir.name}}</typo>
             </div>
         </div>
         <div class="dir-list" v-if="current">
-            <div class="parent" v-if="current.parent" @click="selectRoot(current.parent)">
-                <font-awesome-icon class="return-icon" size="xs" icon="arrow-left" />
-                <typo size="12">{{current.dir.name}}</typo>
+            <div class="parent" v-if="current.parent" @click="selectDir(current.parent)">
+                <div class="return-button">
+                    <font-awesome-icon class="return-icon" size="xs" icon="arrow-left" />
+                    <typo size="12">{{current.dir.name}}</typo>
+                </div>
             </div>
-            <component-list-item @open="selectRoot($event, current.dir)" @select="selectStory" :selectedStory="currentStory" v-for="dir in current.dir.children" :key="dir.name" :directory="dir" :isRoot="true" />
+            <component-list-item @open="selectDir($event, current.dir)" @select="selectStory" :selectedStory="currentStory" v-for="dir in current.dir.children" :key="dir.name" :directory="dir" :isRoot="true" />
         </div>
-        
     </div>
 </template>
 <style scoped>
@@ -26,15 +28,28 @@
 }
 .root {
     align-items: stretch;
-    background: black;
-    color: white;
+    background: #fafafa;
+    color: black;
 }
 .parent {
     height: 50px;
     display: flex;
     align-items: center;
-    background: #eee;
     justify-content: center;
+    cursor: pointer;
+}
+
+.return-button {
+    width: 100%;
+    margin: 8px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 8px;
+    line-height: 12px;
+}
+
+.return-button:hover {
+    background: #e0e0e0;
 }
 
 .return-icon {
@@ -46,10 +61,27 @@
     width: 100px;
     height: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #333;
+    cursor: pointer;
 }
+
+.name:hover {
+    background: #e8e8e8;
+}
+
+.name[selected] {
+    background: #e0e0e0;
+    pointer-events: none;
+}
+
+.name-icon {
+    max-width: 40px;
+    max-height: 40px;
+    margin-bottom: 8px;
+}
+
 .dir-list {
     width: 160px;
 }
@@ -70,6 +102,7 @@ export default {
         return {
             current: null,
             currentStory: null,
+            selectedDir: null,
         }
     },
 
@@ -78,7 +111,11 @@ export default {
             this.currentStory = story
             this.$emit('select', story)
         },
-        selectRoot(dir, parent) {
+        selectRoot(dir) {
+            this.selectedDir = dir.name
+            this.selectDir(dir)
+        },
+        selectDir(dir, parent) {
             dir.children.sort((a, b) => {
                 if (a.children[0].story) {
                     return 1

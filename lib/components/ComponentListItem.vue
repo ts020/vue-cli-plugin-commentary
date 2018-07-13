@@ -1,6 +1,6 @@
 <template>
     <div class="component-list-item">
-        <div class="name" :selected="selected" @click="select()">
+        <div class="name" :selected="selected" @click="select()" :is-directory="isDirectory">
             <font-awesome-icon class="icon" v-if="isDirectory" size="xs" icon="sitemap" />
            <typo size="12">{{directory.name}}</typo>
         </div>
@@ -27,11 +27,16 @@
     justify-content: center;
     align-items: center;
     flex: 1;
+    cursor: pointer;
+}
+
+.name:hover {
+    background: #e8e8e8;
 }
 
 [selected] {
-    background: black;
-    color: white;
+    background: #e0e0e0;
+    pointer-events: none;
 }
 </style>
 
