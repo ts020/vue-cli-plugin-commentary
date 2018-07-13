@@ -1,7 +1,7 @@
 <template>
 	<div class="commentary" >
 		<div class="global-navigation" v-if="!isFull">
-            <div v-for="story in stories" :key="story.name" @click="selectStory(story)">{{story.name}}</div>
+            <div v-for="story in $commentary.stories" :key="story.name" @click="selectStory(story)">{{story.name}}</div>
 		</div>
 		<div class="contents-block" :class="{'is-full':isFull}">
             <template v-if="current">
@@ -60,13 +60,11 @@
 <script>
 import ComponentInfo from './ComponentInfo'
 import ComponentCard from './ComponentCard'
-import { getStories } from '../story'
 export default {
     components: { ComponentInfo, ComponentCard },
     data() {
         return {
             isFull: false,
-            stories: getStories(),
             current: null,
         }
     },
