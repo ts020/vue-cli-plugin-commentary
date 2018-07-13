@@ -1,6 +1,6 @@
 <template>
 	<div class="commentary" >
-        <div class="list" v-if="!isFull">
+        <div class="list" v-show="!isFull">
             <component-list :stories="$commentary.stories" @select="selectStory($event)" />
         </div>
 		<div class="contents-block" :class="{'is-full':isFull}">

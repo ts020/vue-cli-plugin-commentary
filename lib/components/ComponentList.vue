@@ -4,9 +4,9 @@
         <div class="root">
             <div class="name" v-for="dir in directories.children" :key="dir.name" @click="selectRoot(dir)">{{dir.name}}</div>
         </div>
-        <div class="dir-List" v-if="current">
+        <div class="dir-list" v-if="current">
             <div class="parent" v-if="current.parent" @click="selectRoot(current.parent)"> return</div>
-            <component-list-item @open="selectRoot($event, current.dir)" @select="$emit('select', $event)" v-for="dir in current.dir.children" :key="dir.name" :directory="dir" :isRoot="true" />
+            <component-list-item @open="selectRoot($event, current.dir)" @select="selectStory" :selectedStory="currentStory" v-for="dir in current.dir.children" :key="dir.name" :directory="dir" :isRoot="true" />
         </div>
         
     </div>
@@ -33,6 +33,9 @@
     padding: 16px;
     text-align: center;
 }
+.dir-list {
+    width: 160px;
+}
 </style>
 <script>
 import ComponentListItem from './ComponentListItem'
@@ -48,12 +51,24 @@ export default {
     data() {
         return {
             current: null,
+            currentStory: null,
         }
     },
 
     methods: {
+        selectStory(story) {
+            this.currentStory = story
+            this.$emit('select', story)
+        },
         selectRoot(dir, parent) {
-            console.log(parent)
+            dir.children.sort((a, b) => {
+                if (a.children[0].story) {
+                    return 1
+                } else if (b.children[0].story) {
+                    return -1
+                }
+                return 0
+            })
             this.current = {
                 parent: parent,
                 dir: dir,
@@ -64,20 +79,20 @@ export default {
     computed: {
         directories() {
             const dirs = {
-                children: {},
+                children: [],
             }
             this.stories.forEach(story => {
                 let buf = dirs.children
                 story.name.split('/').forEach(dir => {
-                    if (!buf[dir]) {
-                        buf[dir] = {
+                    if (!buf.find(d => d.name === dir)) {
+                        buf.push({
                             name: dir,
-                            children: {},
-                        }
+                            children: [],
+                        })
                     }
-                    buf = buf[dir].children
+                    buf = buf.find(d => d.name === dir).children
                 })
-                buf.story = story
+                buf.push({ story })
             })
             return dirs
         },

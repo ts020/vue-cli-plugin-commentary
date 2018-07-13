@@ -8,6 +8,6 @@ storiesOf('atoms/ColorBox', ColorBox)
     .add('青の説明', { props: { color: 'blue' }, detail: '青だよ' })
 
 storiesOf('molecules/ColorBox3', ColorBox).addExample('説明用のコンポーネント配置してみる', ColorStory)
-storiesOf('molecules/ddd/ColorBox4', ColorBox).addExample('説明用のコンポーネント配置してみる', ColorStory)
+storiesOf('molecules/ddd/ColorBox4', ColorBox)
 
 setup(Vue)

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="name" @click="select()">{{directory.name}}</div>
+        <div class="name" :selected="selected" @click="select()">{{directory.name}}</div>
     </div>
 </template>
 <style scoped>
@@ -10,19 +10,31 @@
 .children {
     padding: 16px;
 }
+[selected] {
+    background: black;
+    color: white;
+}
 </style>
 
 <script>
 export default {
     name: 'component-list-item',
-    props: { isRoot: Boolean, directory: Object },
+    props: { selectedStory: Object, directory: Object },
     methods: {
         select() {
-            if (this.directory.children.story) {
-                this.$emit('select', this.directory.children.story)
+            const story = this.directory.children[0].story
+            if (story) {
+                this.$emit('select', story)
             } else {
                 this.$emit('open', this.directory)
             }
+        },
+    },
+    computed: {
+        selected() {
+            const story = this.directory.children[0].story
+            if (!this.selectedStory || !story) return false
+            return this.selectedStory === story
         },
     },
 }
