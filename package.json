@@ -1,10 +1,11 @@
 {
   "name": "vue-cli-plugin-commentary",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "vue-cli 3 plugin to add Style Guide",
   "main": "index.js",
   "files": [
-    "lib"
+    "lib",
+    "generator"
   ],
   "scripts": {
     "serve": "yarn watch-prettier | yarn dev",
