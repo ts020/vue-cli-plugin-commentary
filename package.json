@@ -1,7 +1,7 @@
 {
   "name": "vue-cli-plugin-commentary",
-  "version": "0.0.2",
-  "description": "vue component guide tool",
+  "version": "0.0.3",
+  "description": "vue-cli 3 plugin to add Style Guide",
   "main": "index.js",
   "files": [
     "lib"
@@ -11,6 +11,11 @@
     "dev": "vue-cli-service serve",
     "watch-prettier": "onchange './**/*.{js,vue,css}' -- prettier --config ./.prettierrc --write {{changed}}"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ts020/vue-cli-plugin-commentary.git"
+  },
+  "homepage": "https://github.com/ts020/vue-cli-plugin-commentary",
   "peerDependencies": {
     "@vue/cli-shared-utils": "^3.0.0-beta.6"
   },
