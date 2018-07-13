@@ -1,5 +1,5 @@
 <template>
-    <div class="color-box" :style="{backgroundColor: color}"><slot /></div>
+    <div class="color-box" :style="{backgroundColor: color}"><slot />{{text}}</div>
 </template>
 <style scoped>
 .color-box {
@@ -14,6 +14,7 @@ export default {
             type: String,
             default: () => 'black',
         },
+        text: String,
     },
     name: 'color-box',
 }

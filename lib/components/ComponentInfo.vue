@@ -29,12 +29,19 @@
 .props {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+}
+
+.props:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 .row {
     line-height: 1em;
-    margin-right: 8px;
+    margin-right: 32px;
 }
 </style>
 <script>
