@@ -1,19 +1,19 @@
 <template>
-	<div class="commentary" >
+    <div class="commentary" >
         <div class="list" v-show="!isFull">
             <component-list :stories="$commentary.stories" @select="selectStory($event)" />
         </div>
-		<div class="contents-block" :class="{'is-full':isFull}">
+        <div class="contents-block" :class="{'is-full':isFull}">
             <template v-if="current">
                 <component :is="current.component" />
                 <component-info :component="current.component" class="component-info" />
                 <component-card v-for="story in current.subStories" :key="story.name" :story="story" :component="current.component" />
             </template>
-		</div>
-		<div class="full" @click="isFull=!isFull">
-			<font-awesome-icon :icon="isFull ? 'compress' : 'expand'" />
-		</div>
-	</div>
+        </div>
+        <div class="full" @click="isFull=!isFull">
+            <font-awesome-icon :icon="isFull ? 'compress' : 'expand'" />
+        </div>
+    </div>
 </template>
 <style>
 html,

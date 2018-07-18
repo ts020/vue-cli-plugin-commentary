@@ -2,7 +2,7 @@
     <div class="commpentary-card">
         <h2>{{story.name}}</h2>
         <div class="desc">{{story.detail}}</div>
-		<div class="commpentary-body">
+        <div class="commpentary-body">
             <template v-if="story.type === 'props'">
                 <component :is="component" v-bind="story.props">{{story.slot}}</component>
                 <div>{{code}}</div>
@@ -10,7 +10,7 @@
             <template v-else>
                 <component :is="story.view" v-bind="story.props" />
             </template>
-		</div>
+        </div>
     </div>
 </template>
 <style scoped>
