@@ -4,7 +4,7 @@
         <div class="desc">{{story.detail}}</div>
 		<div class="commpentary-body">
             <template v-if="story.type === 'props'">
-                <component :is="component" v-bind="story.props" />
+                <component :is="component" v-bind="story.props">{{story.slot}}</component>
                 <div>{{code}}</div>
             </template>
             <template v-else>
