@@ -49,6 +49,22 @@ import Typo from './Typo'
 function isEmpty(value) {
     return typeof value === 'undefined' || value === null
 }
+
+function parseType(propType) {
+    if (isEmpty(propType.type)) {
+        return typeToString(propType)
+    } else {
+        return typeToString(propType.type)
+    }
+}
+
+function typeToString(type) {
+    if (type instanceof Array) {
+        return type.map(d => d.name).join(',')
+    }
+    return type.name
+}
+
 export default {
     components: { Typo },
     props: {
@@ -60,7 +76,7 @@ export default {
             return Object.keys(props).map(name => ({
                 name: name,
                 isRequire: !isEmpty(props[name].isReuire),
-                type: isEmpty(props[name].type) ? props[name].name : props[name].type.name,
+                type: parseType(props[name]),
                 default: isEmpty(props[name].default) ? null : props[name].default(),
             }))
         },
