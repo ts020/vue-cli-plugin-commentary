@@ -20,3 +20,5 @@ import Component from '...'
 storyOf('atoms/Component', Component)
     .add('title', {props: {color:'red'}})
 ```
+## :scroll: Changelog
+Details changes for each release are documented in the [CHANGELOG.md](https://github.com/ts020/vue-cli-plugin-commentary/blob/master/CHANGELOG.md).
