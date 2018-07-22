@@ -11,7 +11,7 @@
     "serve": "yarn watch-prettier | yarn dev",
     "dev": "vue-cli-service serve",
     "watch-prettier": "onchange './**/*.{js,vue,css}' -- prettier --config ./.prettierrc --write {{changed}}",
-    "changelog": "yarn changelog.js"
+    "changelog": "node changelog.js"
   },
   "repository": {
     "type": "git",
