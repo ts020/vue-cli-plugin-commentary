@@ -1,5 +1,5 @@
 <template>
-    <div class="component-info" v-if="component">
+    <div class="component-info" v-if="component && propList.length > 0">
         <div class="props" v-for="prop in propList" :key="prop.name">
             <div class="row">
                 <div><typo size="p-4" weight="bold">prop-name</typo></div>
@@ -73,7 +73,7 @@ export default {
     computed: {
         propList() {
             const props = this.component.props
-            return Object.keys(props).map(name => ({
+            return Object.keys(props || {}).map(name => ({
                 name: name,
                 isRequire: !isEmpty(props[name].isReuire),
                 type: parseType(props[name]),

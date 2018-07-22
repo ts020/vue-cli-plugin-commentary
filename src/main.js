@@ -3,6 +3,7 @@ import { setup } from '../lib'
 import { storiesOf } from '../lib/story'
 import ColorBox from './example/ColorBox'
 import TypoTest from './example/TypoTest'
+import ExampleButton from './example/ExampleButton'
 
 import ColorStory from './example/ColorBox.story'
 storiesOf('atoms/ColorBox', ColorBox)
@@ -17,6 +18,7 @@ storiesOf('atoms/TypoTest', TypoTest)
     .add('text-2', { props: { type: 'text-2' }, slot: 'text' })
     .add('text-3', { props: { type: 'text-3' }, slot: 'text' })
     .add('text-4', { props: { type: 'text-4' }, slot: 'text' })
+storiesOf('atoms/ExampleButton', ExampleButton).add('label', { slot: 'text' })
 storiesOf('molecules/ColorBox3', ColorBox).addExample('I will arrange the components for explanation', ColorStory)
 storiesOf('molecules/ddd/ColorBox4', ColorBox)
 storiesOf('orgamisms/ColorBox4', ColorBox)

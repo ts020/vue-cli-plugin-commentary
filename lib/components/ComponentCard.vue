@@ -57,7 +57,7 @@ export default {
         },
         attr() {
             const props = this.story.props
-            return Object.keys(props)
+            return Object.keys(props || {})
                 .map(key => `${key}="${props[key]}"`)
                 .join(' ')
         },
