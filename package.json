@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-commentary",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "vue-cli 3 plugin to add Style Guide",
   "main": "index.js",
   "files": [
