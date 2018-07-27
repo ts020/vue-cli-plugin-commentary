@@ -11,7 +11,7 @@
     "serve": "yarn watch-prettier | yarn dev",
     "dev": "vue-cli-service serve",
     "watch-prettier": "onchange './**/*.{js,vue,css}' -- prettier --config ./.prettierrc --write {{changed}}",
-    "changelog": "node changelog.js"
+    "changelog": "yarn conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "@vue/cli-service": "^3.0.0-beta.15",
     "@vue/eslint-config-prettier": "^3.0.0-rc.3",
     "conventional-changelog": "^2.0.1",
+    "conventional-changelog-cli": "^2.0.1",
     "onchange": "^4.0.0",
     "prettier": "^1.13.7",
     "readline": "^1.3.0",
