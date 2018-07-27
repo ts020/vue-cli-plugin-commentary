@@ -42,6 +42,14 @@ h2 {
 }
 </style>
 <script>
+const functionReplacer = (k, v) => {
+    /* functions in objects is not stringified in default JSON#stringify */
+    if (typeof v === 'function') {
+        return v.toString()
+    }
+    return v
+}
+
 export default {
     props: {
         story: Object,
@@ -58,7 +66,7 @@ export default {
         attr() {
             const props = this.story.props
             return Object.keys(props || {})
-                .map(key => `${key}="${props[key]}"`)
+                .map(key => `${key}=${JSON.stringify(props[key], functionReplacer)}`)
                 .join(' ')
         },
     },
